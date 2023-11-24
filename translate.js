@@ -2,6 +2,10 @@ const linguaPortuguesa = document.createElement("script");
 linguaPortuguesa.src = "idiomas/portugues.js";
 document.head.appendChild(linguaPortuguesa);
 
+const linguaPolonesa = document.createElement("script");
+linguaPolonesa.src = "idiomas/polski.js";
+document.head.appendChild(linguaPolonesa);
+
 const linguaEspanhola = document.createElement("script");
 linguaEspanhola.src = "idiomas/espanol.js";
 document.head.appendChild(linguaEspanhola);
@@ -25,7 +29,8 @@ function translate(idioma) {
         : (idioma == "es") ? espanol()
             : (idioma == "fr") ? francais()
                 : (idioma == "en") ? english()
-                    : null;
+                    : (idioma == "pl") ? polski()
+                        : null;
     setLanguage(traducao);
 }
 
